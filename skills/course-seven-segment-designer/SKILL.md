@@ -28,6 +28,19 @@ Load only the references needed for the user request:
 - Read `references/output-templates.md` when producing a full diagnosis, quick diagnosis, framework design, rewrite plan, or self-check.
 - Read `references/calibration-cases.md` when score calibration, D1 examples, training samples, or same-word-count benchmark reasoning is useful.
 
+## First Response Behavior
+
+Choose the smallest useful response that still completes the user's request:
+
+- If the user provides enough material, begin the work directly. Do not ask for perfect inputs before giving value.
+- If key learner information is missing, build an inferred learner card, label uncertainty, and list the missing inputs that would improve accuracy.
+- If the user asks "怎么用/需要什么资料/给我模板", provide a user-facing input checklist and prompt examples instead of doing diagnosis.
+- If the user provides only a vague course idea, return a starter seven-segment framework plus 3-5 high-impact questions for the next iteration.
+- If the source material is long and the user did not ask for a full report, default to a compact diagnosis with the biggest structural problems and upgrade path.
+- If the user asks for "完整诊断/正式评分/逐字稿深度诊断/整体重构", use the complete output structure and do not omit module-misjudgment or pyramid reconstruction.
+
+Default to the user's language. For Chinese course materials, use Chinese section names and preserve the seven fixed module names.
+
 ## Operating Principles
 
 1. Start with learner analysis. If the user has not provided target learner, stage, pain point, learning goal, and next action, infer cautiously from the material and label every inferred judgment.
@@ -56,6 +69,18 @@ Classify the user request into one or more modes:
 
 If the user explicitly asks for a short answer, use quick mode and say what was intentionally omitted. Otherwise, use the complete workflow for diagnosis and scoring.
 
+### 1.1 Set the Deliverable Preset
+
+Use these presets to keep output useful:
+
+| Preset | Use when | Output emphasis |
+|---|---|---|
+| Quick check | user says quick/先看/粗评 | conclusion, biggest 3 issues, highest-priority fixes |
+| Standard diagnosis | user gives outline/transcript and wants diagnosis | learner card, seven-segment mapping, secondary-task gaps, priority advice |
+| Formal scoring | user asks score/几分/为什么不能更高 | score anchor, cannot-upgrade rule, decisive evidence, upgrade task |
+| Rewrite plan | user asks 改造/优化/重构 | pyramid reconstruction, rewrite actions, key wording examples |
+| Teaching design | user asks 设计一节课/生成框架 | parameter snapshot, seven segments, secondary tasks, wording landing points |
+
 ### 2. Build the Learner Analysis Card
 
 Before giving a firm judgment, identify:
@@ -73,6 +98,24 @@ Before giving a firm judgment, identify:
 - whether each judgment is user-provided, source-material evidence, or inference
 
 If critical information is missing, continue with a cautious inferred version and list the missing materials that would improve accuracy.
+
+If the user wants an input template, provide:
+
+```text
+课程主题：
+目标学员：
+课程阶段：D1破冰 / 知识交付 / 营销转化
+直播时长：
+学员已有基础：
+表层痛点：
+深层需求：
+本节课要记住：
+本节课要理解：
+本节课要掌握/应用：
+课后下一步行动：
+已有材料：大纲 / PPT / 逐字稿 / 录音转写 / 其他
+希望输出：快速诊断 / 完整诊断 / 评分 / 重构方案 / 优化话术 / 新课框架
+```
 
 ### 3. Analyze the Seven-Segment Chain
 

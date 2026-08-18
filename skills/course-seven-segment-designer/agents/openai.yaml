@@ -1,4 +1,4 @@
 interface:
   display_name: "课程七段结构设计诊断"
   short_description: "用于直播课程七段结构设计、诊断、评分和改稿重构流程"
-  default_prompt: "请使用 $course-seven-segment-designer 诊断这节直播课结构，并给出评分、不能升档原因和七段重构方案。"
+  default_prompt: "请使用 $course-seven-segment-designer 帮我做课程七段结构诊断或设计，并按需要输出快速诊断、评分、重构方案或优化话术。"

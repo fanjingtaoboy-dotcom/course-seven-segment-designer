@@ -2,6 +2,14 @@
 
 Use these prompts to regression-test the skill before publishing or after major edits.
 
+## Usage Help
+
+```text
+我刚安装了 $course-seven-segment-designer，这个 skill 怎么用？我需要提供哪些材料？
+```
+
+Expected behavior: provide install/use reminder, input template, common task prompts, and output modes; do not diagnose without course material.
+
 ## Explicit Invocation
 
 ```text

@@ -1,5 +1,19 @@
 # Output Templates
 
+## Deliverable Presets
+
+Use these presets to keep answers sized to the user's intent.
+
+| Preset | When to use | Must include | May omit or compress |
+|---|---|---|---|
+| 使用说明 | user asks how to use the skill | install/use prompts, input template, common modes | course diagnosis |
+| 快速诊断 | user asks quick check | conclusion, information boundary, seven-segment completeness, 3 biggest issues, priority fixes | tertiary tables and long wording examples |
+| 标准诊断 | user provides outline/transcript and wants diagnosis | learner card, overall judgment, seven-segment mapping, secondary-task checks, priority fixes | exhaustive tertiary checks unless decisive |
+| 正式评分 | user asks score/grade/why not higher | score, closest anchor, evidence, cannot-upgrade rule, upgrade action | long full rewrite |
+| 深度诊断 | user asks full/deep/transcript diagnosis | all full diagnosis chapters, key tertiary checks, module misjudgment, pyramid reconstruction | nothing structurally required |
+| 改稿重构 | user asks optimize/rewrite/rebuild | diagnosis basis, pyramid plan, rewrite actions, key wording, wording mapping | full scoring unless requested |
+| 新课设计 | user asks design/generate course | parameter snapshot, seven segments, secondary tasks, wording landing points, risks | original-evidence tables |
+
 ## Full Diagnosis
 
 Unless the user explicitly asks for a short version, a complete diagnosis should include:
@@ -67,6 +81,21 @@ Use when the user asks for quick review, rough check, or "先看大问题":
 ```
 
 Keep quick diagnosis strict. Do not hide an unqualified module behind soft language.
+
+## Usage Guidance Response
+
+When the user asks how to use the skill, answer with:
+
+```text
+1. 安装方式
+2. 最稳调用句式
+3. 可提供的材料类型
+4. 输入模板
+5. 常用任务 prompt
+6. 输出模式说明
+```
+
+Do not diagnose a course unless the user also provides course material.
 
 ## Framework Design
 
