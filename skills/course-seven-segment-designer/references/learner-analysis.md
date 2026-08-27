@@ -9,6 +9,7 @@ Build this card before firm design, diagnosis, scoring, or reconstruction:
 学员当前处于什么场景：
 学员当前心理起点是 A0/A1/A2/A3/A4 中哪一类：
 课程阶段类型是 D1破冰 / 知识交付 / 营销转化 中哪一类：
+课程类型是 训练营单课 / 交付课 / 公开课 / 专题课 中哪一类：
 学员已有认知基础是什么：
 学员遇到的表层痛点是什么：
 痛点背后的深层需求是什么：
@@ -16,6 +17,7 @@ Build this card before firm design, diagnosis, scoring, or reconstruction:
 本节课希望学员理解什么：
 本节课希望学员掌握或应用什么：
 课程希望学员课后做什么下一步行动：
+本节课的优先级排序是什么：
 学员不行动或学不会的主要阻力是什么：
 这些判断来自用户提供资料、原稿证据，还是推断：
 ```
@@ -44,6 +46,7 @@ If learner data is incomplete:
 | live scene | all | Does it manage device checks, attendance, attention, and rhythm? |
 | lesson duration | all | Are segment proportions reasonable? |
 | target action | 结尾升华 | Is the homework/practice/consultation/purchase low-resistance and clear? |
+| priority order | all, especially 总结回顾 and 结尾升华 | Does the course protect the primary goal instead of letting secondary goals compete with it? |
 
 ## Typical Failures from Weak Learner Analysis
 
@@ -64,6 +67,8 @@ The seven segments remain fixed, but weight changes by stage:
 | D1 破冰建立信任 | A0, A1 | move from unfamiliar to interested; build trust |
 | 知识交付 | A1, A2 | deepen interest; teach core knowledge; stimulate continued learning |
 | 营销转化 | A2, A3 | move from inquiry to action; create reasonable urgency and conversion reason |
+| 训练营单课 | A0-A3 depending on day | complete one visible learning win while supporting attendance and homework |
+| 交付课 | A1-A4 | teach for understanding, practice, memory, and feedback closure |
 
 | Segment | D1 trust-building | knowledge delivery | marketing conversion |
 |---|---|---|---|
@@ -74,6 +79,8 @@ The seven segments remain fixed, but weight changes by stage:
 | 案例应用/实操演示 | simple application and confidence | improve application ability | show higher-level content and desire |
 | 总结回顾 | strengthen learning confidence | consolidate knowledge | reinforce value and action reason |
 | 结尾升华 | encourage continuous learning | encourage persistence | push immediate reasonable action |
+
+For 训练营单课 and 交付课, also read `course-types.md`.
 
 ## Pacing Reference
 

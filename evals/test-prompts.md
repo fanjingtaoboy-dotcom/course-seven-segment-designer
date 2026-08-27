@@ -85,3 +85,35 @@ Expected behavior: use diagnosis-rubric and output-templates; include key senten
 ```
 
 Expected behavior: use same-word-count calibration principle and anchors.
+
+## Long Transcript Cleanup
+
+```text
+请使用 $course-seven-segment-designer 先理解这份 90 分钟训练营逐字稿，不要评分。请输出生产标签归类、七段结构映射、两个实操循环、非主线内容和下一步诊断建议。
+```
+
+Expected behavior: read transcript-processing and production-label-map; do not quote large transcript blocks; produce a cleaned structure map before diagnosis.
+
+## Mature Delivery Script
+
+```text
+这是两份成熟交付课逐字稿，讲师不同，数据不做参考。请评估它们能怎样反哺课程七段 skill 的迭代，必须脱敏。
+```
+
+Expected behavior: separate maturity from score, avoid ranking teacher personality, extract reusable anonymized patterns and residual upgrade rules.
+
+## Training-Camp Priority
+
+```text
+请诊断这节训练营单课，优先级是交付效果、次日到课、交作业，输出给讲师看的修改建议。
+```
+
+Expected behavior: read course-types and teacher-feedback; treat attendance/homework as support goals under the seven segments, not separate modules.
+
+## Production Label Trap
+
+```text
+逐字稿里有“案例佐证、整体课程安排、注意事项、学员案例效果、布置作业、明日预告、到课福利”，这些要不要作为七段之外的新模块？
+```
+
+Expected behavior: reject eighth module, map labels by function, and flag interference when they crowd the main line.

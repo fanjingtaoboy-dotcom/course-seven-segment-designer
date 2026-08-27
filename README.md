@@ -8,12 +8,16 @@ It uses a seven-segment psychological progression:
 暖场破冰 -> 引发需求 -> 挖掘痛点 -> 原理讲解 -> 案例应用/实操演示 -> 总结回顾 -> 结尾升华
 ```
 
-This skill is designed for live public classes, training-camp lessons, and online topic lessons. It helps an AI assistant produce structured course outlines, diagnose course drafts or transcripts, score a lesson on 1/3/5/7/9 anchors, explain why a course cannot move to a higher band, and produce pyramid-style reconstruction plans.
+This skill is designed for live public classes, training-camp single lessons, delivery classes, and online topic lessons. It helps an AI assistant produce structured course outlines, diagnose course drafts or transcripts, clean and map long transcripts, score a lesson on 1/3/5/7/9 anchors, explain why a course cannot move to a higher band, and produce pyramid-style reconstruction plans.
 
 ## What It Can Do
 
 - Design a new live-course framework from learner information.
 - Diagnose a course outline, PPT structure, transcript, or lesson script.
+- Clean and structure long or noisy transcripts before diagnosis.
+- Diagnose training-camp delivery lessons where the priorities are delivery effect, next-session attendance, and homework.
+- Convert production labels such as welfare, cases, course preview, homework, and assistant follow-up into seven-segment functions.
+- Produce teacher-facing feedback for course consultants and teaching researchers.
 - Score a lesson using 1/3/5/7/9 anchors and explain why it cannot score higher.
 - Rebuild a weak course into a seven-segment pyramid.
 - Improve openings, need activation, pain excavation, principle explanation, practice/application, summary, and ending.
@@ -58,6 +62,7 @@ Copy this template when you want a higher-quality result:
 课程主题：
 目标学员：
 课程阶段：D1破冰 / 知识交付 / 营销转化
+课程类型：训练营单课 / 交付课 / 公开课 / 专题课
 直播时长：
 学员已有基础：
 表层痛点：
@@ -66,6 +71,7 @@ Copy this template when you want a higher-quality result:
 本节课要理解：
 本节课要掌握/应用：
 课后下一步行动：
+优先级排序：交付效果 / 次日到课 / 交作业 / 咨询转化 / 其他
 已有材料：大纲 / PPT / 逐字稿 / 录音转写 / 其他
 
 请分析的材料：
@@ -104,6 +110,18 @@ Copy this template when you want a higher-quality result:
 请使用 $course-seven-segment-designer 把这节课重构成七段金字塔方案，并给出每段的二级任务、关键三级验收点和话术落点。
 ```
 
+### Long Transcript Cleanup
+
+```text
+请使用 $course-seven-segment-designer 先整理这份 90 分钟逐字稿，输出生产标签归类、七段结构映射、实操循环和最影响交付效果的问题。
+```
+
+### Training-Camp Delivery
+
+```text
+请使用 $course-seven-segment-designer 诊断这节训练营单课。优先级是交付效果、次日到课、交作业。请输出给讲师看的保留、压缩、重说和排练清单。
+```
+
 ## Output Modes
 
 | Mode | Use when | Typical output |
@@ -113,14 +131,18 @@ Copy this template when you want a higher-quality result:
 | 正式评分 | You need a score | score, closest anchor, cannot-upgrade reason, next upgrade task |
 | 重构方案 | You need a better structure | top goal, learner takeaway, seven segments, secondary tasks, wording landing points |
 | 优化话术 | You need wording | optimized lines plus mapping to tasks and psychological shifts |
+| 长逐字稿整理 | You need a long script understood first | cleaned structure map, production label mapping, practice loops, risks |
+| 讲师反馈 | You need a teacher-ready memo | keep/change/rewrite/rehearse checklist |
 
 ## Tips
 
 - Provide learner information whenever possible. The skill can infer, but it will label inferred judgments.
 - For formal scoring, include the full outline or transcript rather than only a title.
 - For long transcripts, ask for "快速诊断" first, then request a full report for the most important segments.
+- For noisy transcripts, ask for "先整理逐字稿" before scoring or rewriting.
 - Do not create extra top-level modules such as "课程管理" or "奖励纪律"; the skill will classify those into the seven fixed segments.
 - For practice classes, describe the intended action, demonstration, feedback standard, and homework.
+- For private or proprietary course materials, ask the skill to use 脱敏分析. Public examples should use abstracted patterns instead of raw transcripts.
 
 ## Updating The Skill
 
@@ -140,8 +162,13 @@ skills/course-seven-segment-designer/
 └── references/
     ├── framework.md
     ├── learner-analysis.md
+    ├── course-types.md
+    ├── transcript-processing.md
+    ├── production-label-map.md
     ├── diagnosis-rubric.md
     ├── scoring.md
+    ├── mature-delivery-benchmarks.md
+    ├── teacher-feedback.md
     ├── calibration-cases.md
     └── output-templates.md
 ```
@@ -155,6 +182,7 @@ This skill is intentionally built as a progressive-disclosure skill:
 - Diagnosis requires learner-source boundaries.
 - Formal scoring requires secondary-task checks and key tertiary acceptance checks.
 - Course reconstruction must produce a pyramid, not just seven module names.
+- Long transcript work must separate source cleanup, production labels, seven-segment function, and teacher-facing actions.
 
 ## Attribution And License
 

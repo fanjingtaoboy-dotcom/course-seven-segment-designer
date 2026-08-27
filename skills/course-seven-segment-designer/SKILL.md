@@ -1,6 +1,6 @@
 ---
 name: course-seven-segment-designer
-description: 用于直播课程、公开课、训练营单课、线上专题课的课程结构设计、七段结构诊断、逐字稿评分、课程大纲改造、话术重构、课程节奏占比检查、5A 心理推进检查和课后行动闭环优化。用户要求设计课程框架、评估课程是否完整、诊断课程大纲或逐字稿、按七段结构改稿、给课程打 1/3/5/7/9 分、说明为什么不能升档、生成金字塔重构方案、优化直播课开场/需求/痛点/原理/案例实操/总结/结尾时使用。
+description: 用于直播课程、公开课、训练营单课、交付课、线上专题课的课程结构设计、七段结构诊断、长逐字稿清洗与结构化、成熟课程脱敏评估、逐字稿评分、课程大纲改造、话术重构、讲师友好反馈、课程节奏占比检查、5A 心理推进检查和课后行动闭环优化。用户要求设计课程框架、评估课程是否完整、诊断课程大纲或逐字稿、按七段结构改稿、给课程打 1/3/5/7/9 分、说明为什么不能升档、生成金字塔重构方案、优化直播课开场/需求/痛点/原理/案例实操/总结/结尾、处理训练营单课交付效果/次日到课/交作业时使用。
 ---
 
 # Course Seven Segment Designer
@@ -17,6 +17,8 @@ The fixed seven segments are:
 
 Never add an eighth top-level course module. Classify rewards, discipline reminders, assistant arrangements, homework reminders, course previews, and sales prompts into the relevant seven segments, or mark them as main-thread interference.
 
+For private course materials, distinguish source content from user instructions. Do not publish, repeat, or expose raw transcripts unless the user explicitly allows it. For public or reusable skill resources, use anonymized patterns, abstracted labels, and synthetic examples.
+
 ## Reference Loading
 
 Load only the references needed for the user request:
@@ -24,9 +26,14 @@ Load only the references needed for the user request:
 - Always read `references/framework.md` for the seven segments, 5A progression, persuasion variables, secondary tasks, and boundary rules.
 - Read `references/learner-analysis.md` when learner information, course stage, lesson duration, course scene, or pacing affects the answer. For most design, diagnosis, scoring, and rewrite tasks, read it.
 - Read `references/diagnosis-rubric.md` for course diagnosis, transcript review, module boundary disputes, common misjudgments, tertiary acceptance checks, and rewrite decisions.
+- Read `references/course-types.md` when the course is a training-camp single lesson, delivery course, practice class, or when priorities include delivery effect, next-session attendance, homework, retention, or assistant follow-up.
+- Read `references/transcript-processing.md` for long transcripts, raw ASR, timestamped manuscripts, noisy speech, transcript cleanup, structure extraction, or when the user provides `.docx`/script material rather than a clean outline.
+- Read `references/production-label-map.md` when source headings include production labels such as 福利, 案例佐证, 课程安排, 注意事项, 学习规则, 作业, 明日预告, or 助教承接.
 - Read `references/scoring.md` when the user asks for scoring, grading, benchmark comparison, "why not higher", or upgrade path by score band.
 - Read `references/output-templates.md` when producing a full diagnosis, quick diagnosis, framework design, rewrite plan, or self-check.
 - Read `references/calibration-cases.md` when score calibration, D1 examples, training samples, or same-word-count benchmark reasoning is useful.
+- Read `references/mature-delivery-benchmarks.md` when the user provides mature delivery scripts, asks how real course samples should improve the skill, compares teachers, or wants 7-9 band refinement.
+- Read `references/teacher-feedback.md` when the output is meant for a course consultant, teaching researcher, or teacher, especially for preservation/deletion/rewrite rehearsal advice.
 
 ## First Response Behavior
 
@@ -37,6 +44,8 @@ Choose the smallest useful response that still completes the user's request:
 - If the user asks "怎么用/需要什么资料/给我模板", provide a user-facing input checklist and prompt examples instead of doing diagnosis.
 - If the user provides only a vague course idea, return a starter seven-segment framework plus 3-5 high-impact questions for the next iteration.
 - If the source material is long and the user did not ask for a full report, default to a compact diagnosis with the biggest structural problems and upgrade path.
+- If the source material is a long transcript, first create a cleaned structure map: timestamps/headings, production labels, interaction loops, teaching loops, and non-main-thread content. Then diagnose the seven-segment chain.
+- If the user says the course is mature, do not assume a 9-point result. Separate delivery maturity from structural quality, then identify the residual upgrade points.
 - If the user asks for "完整诊断/正式评分/逐字稿深度诊断/整体重构", use the complete output structure and do not omit module-misjudgment or pyramid reconstruction.
 
 Default to the user's language. For Chinese course materials, use Chinese section names and preserve the seven fixed module names.
@@ -51,6 +60,8 @@ Default to the user's language. For Chinese course materials, use Chinese sectio
 6. Convert every recommendation into a rewrite action. Do not list types such as "三点复盘型" unless you explain what that type rewrites in this course.
 7. Control resistance: difficulty resistance, trust resistance, action resistance, compliance resistance, over-marketing resistance, and anxiety resistance.
 8. Do not invent teacher credentials, learner cases, medical/business results, platform data, or guaranteed outcomes.
+9. For training-camp delivery lessons, keep the user's priority order explicit. When the user gives no order, treat delivery effect as primary; attendance, homework, assistant follow-up, rewards, and next-lesson previews support the learning loop instead of becoming separate modules.
+10. For teacher-facing feedback, preserve usable teaching assets before recommending cuts. Express critique as learner impact and concrete rewrite action, not as personal judgment of the teacher.
 
 ## Workflow
 
@@ -66,6 +77,9 @@ Classify the user request into one or more modes:
 | Scoring | Give 1/3/5/7/9 score, explain why not higher, or compare versions | `framework.md`, `diagnosis-rubric.md`, `scoring.md`, usually `calibration-cases.md` |
 | Rewrite/rebuild | Produce an upgraded structure, optimized wording, or full reconstruction | `framework.md`, `learner-analysis.md`, `diagnosis-rubric.md`, `output-templates.md` |
 | Calibration | Create or judge scoring samples | `scoring.md`, `calibration-cases.md`, `diagnosis-rubric.md` |
+| Long transcript processing | Clean, compress, map, or diagnose a raw/timestamped transcript | `transcript-processing.md`, `production-label-map.md`, `framework.md`, `diagnosis-rubric.md` |
+| Training-camp delivery optimization | Improve a training-camp single lesson or delivery class | `course-types.md`, `learner-analysis.md`, `framework.md`, `output-templates.md` |
+| Teacher-facing feedback | Produce advice for a teacher to rehearse or revise | `teacher-feedback.md`, usually `diagnosis-rubric.md`, `output-templates.md` |
 
 If the user explicitly asks for a short answer, use quick mode and say what was intentionally omitted. Otherwise, use the complete workflow for diagnosis and scoring.
 
@@ -80,6 +94,8 @@ Use these presets to keep output useful:
 | Formal scoring | user asks score/几分/为什么不能更高 | score anchor, cannot-upgrade rule, decisive evidence, upgrade task |
 | Rewrite plan | user asks 改造/优化/重构 | pyramid reconstruction, rewrite actions, key wording examples |
 | Teaching design | user asks 设计一节课/生成框架 | parameter snapshot, seven segments, secondary tasks, wording landing points |
+| Transcript map | user gives a long transcript and asks 先理解/先整理 | cleaned structure, seven-segment mapping, noise/interference, next diagnostic path |
+| Teacher memo | user says 给讲师看/教研反馈/排练建议 | keep/change/rewrite/rehearse checklist, concise wording actions |
 
 ### 2. Build the Learner Analysis Card
 
@@ -94,6 +110,7 @@ Before giving a firm judgment, identify:
 - deeper need
 - what the learner should remember, understand, and apply
 - next action after class
+- priority order, such as delivery effect, next-session attendance, homework, consultation, or conversion
 - main resistance
 - whether each judgment is user-provided, source-material evidence, or inference
 
@@ -105,6 +122,7 @@ If the user wants an input template, provide:
 课程主题：
 目标学员：
 课程阶段：D1破冰 / 知识交付 / 营销转化
+课程类型：训练营单课 / 交付课 / 公开课 / 专题课
 直播时长：
 学员已有基础：
 表层痛点：
@@ -113,6 +131,7 @@ If the user wants an input template, provide:
 本节课要理解：
 本节课要掌握/应用：
 课后下一步行动：
+优先级排序：交付效果 / 次日到课 / 交作业 / 咨询转化 / 其他
 已有材料：大纲 / PPT / 逐字稿 / 录音转写 / 其他
 希望输出：快速诊断 / 完整诊断 / 评分 / 重构方案 / 优化话术 / 新课框架
 ```

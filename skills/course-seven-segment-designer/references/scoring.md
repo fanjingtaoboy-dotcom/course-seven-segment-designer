@@ -31,6 +31,8 @@ Distinguish:
 | function | whether each module completes secondary tasks | nice wording |
 | closure | whether learners understand, can use, remember, and act | quantity of teaching |
 
+For mature delivery scripts, do not score from "成熟感" or known business results. If two courses face different learner groups, do not use outcome data for cross-course scoring unless the user explicitly asks for operational analysis and provides comparable context. Score the observable structure: main line, segment coupling, practice validation, memory compression, and action closure.
+
 ## Score Bands
 
 | Score | Structure | Secondary tasks | Learner result | Typical performance |
@@ -40,6 +42,16 @@ Distinguish:
 | 5 | seven segments mostly present but main line messy | some tasks done, some missing | learner can follow some actions but may not remember core flow | opening, pain, principle, practice exist but many side branches |
 | 7 | clear sequence and focused main line | most tasks completed | learner takes away basic flow and can finish homework | clear goal, learning reason, pain cause, retellable flow, action standard |
 | 9 | stable segment coupling and natural psychological progression | tasks complete with wording landing points | learner understands, practices, remembers, and acts | one main line, few key objects, clear flow, mistake reminders, action standard, next-step loop |
+
+## Mature but Optimizable
+
+A mature delivery script often starts near the 7-point diagnostic conversation, but it can still be capped below 9 by these issues:
+
+1. It delivers an in-class experience but the summary does not make the method easy to retell.
+2. It has homework but lacks a precise quality standard or feedback criterion.
+3. It motivates next-session attendance but relies too much on rewards, authority, or pressure.
+4. It has rich cases but does not bind them to one method model.
+5. It uses strong outcome language that increases trust or compliance resistance.
 
 ## Five-Dimension Evidence Table
 
@@ -74,6 +86,8 @@ Banding rules:
 | above 7 | 结尾 only assigns homework without action motive, standard, and low-resistance next step | 5 |
 | 9 | segments qualify but expression is still template-like or value connection unnatural | 7 |
 | 9 | learners can follow but cannot transfer to self/family/business scenes | 7 |
+| 9 | course is mature in delivery but the main line is crowded by rewards, authority, or unrelated cases | 7 |
+| 9 | next-session attendance and homework are clear, but not naturally derived from today's learning gain | 7 |
 
 ## Upgrade Path
 

@@ -13,6 +13,8 @@ Use these presets to keep answers sized to the user's intent.
 | 深度诊断 | user asks full/deep/transcript diagnosis | all full diagnosis chapters, key tertiary checks, module misjudgment, pyramid reconstruction | nothing structurally required |
 | 改稿重构 | user asks optimize/rewrite/rebuild | diagnosis basis, pyramid plan, rewrite actions, key wording, wording mapping | full scoring unless requested |
 | 新课设计 | user asks design/generate course | parameter snapshot, seven segments, secondary tasks, wording landing points, risks | original-evidence tables |
+| 长逐字稿整理 | user provides raw/timestamped transcript and asks to understand or prepare diagnosis | source boundary, cleaned structure map, production label mapping, top risks | formal score and full rewrite |
+| 讲师反馈 | user wants output for teacher, consultant, or teaching researcher | preserve/change/rewrite/rehearse memo | exhaustive tables |
 
 ## Full Diagnosis
 
@@ -106,6 +108,8 @@ Start with parameter snapshot, then seven-segment body.
 学员人群：
 学员心理起点：
 课程阶段类型：
+课程类型：
+目标优先级：
 课程场景：直播课程
 授课时长：
 语言风格：
@@ -220,3 +224,35 @@ Before completing a full diagnosis, self-check:
 | 金字塔版是否写出顶层目标、学员下课带走内容、七段二级任务、关键三级验收点和话术落点？ |  |
 | 是否输出了按优先级排序的调整建议？ |  |
 | 是否标记了奖励、纪律、作业、预告等非教学主线内容应归入哪一段，或是否挤占主线？ |  |
+| 如果是长逐字稿，是否先完成清洗、标签映射和主线归类？ |  |
+| 如果输出给讲师，是否包含保留、压缩、重说、补转场和排练清单？ |  |
+
+## Long Transcript Structure Map
+
+Use before deep diagnosis when the source is long or noisy:
+
+```text
+资料边界：
+文本状态：
+原始小标题/时间戳：
+生产标签归类：
+七段初步映射：
+实操循环：
+非主线内容：
+最影响交付效果的问题：
+下一步建议：
+```
+
+## Teacher-Facing Memo
+
+Use when the output is intended for a teacher:
+
+```text
+一、整体判断
+二、建议保留
+三、建议压缩或删除
+四、需要重说的关键段
+五、需要补的转场
+六、实操/案例/作业验收标准
+七、讲师排练清单
+```
