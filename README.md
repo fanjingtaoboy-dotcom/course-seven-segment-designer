@@ -191,5 +191,5 @@ This project is licensed under Creative Commons Attribution 4.0 International (C
 Suggested attribution:
 
 ```text
-Course Seven Segment Designer by 梵净淘宝网
+Course Seven Segment Designer by 范范之辈
 ```
