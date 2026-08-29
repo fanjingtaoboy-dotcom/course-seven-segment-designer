@@ -34,6 +34,7 @@ Load only the references needed for the user request:
 - Read `references/calibration-cases.md` when score calibration, D1 examples, training samples, or same-word-count benchmark reasoning is useful.
 - Read `references/mature-delivery-benchmarks.md` when the user provides mature delivery scripts, asks how real course samples should improve the skill, compares teachers, or wants 7-9 band refinement.
 - Read `references/teacher-feedback.md` when the output is meant for a course consultant, teaching researcher, or teacher, especially for preservation/deletion/rewrite rehearsal advice.
+- Read `references/sales-conversion-bridge.md` when a course contains a sales conversion section, when the user asks about in-course sales, or when the boundary between teaching delivery and sales conversion affects the judgment.
 
 ## First Response Behavior
 
@@ -62,6 +63,7 @@ Default to the user's language. For Chinese course materials, use Chinese sectio
 8. Do not invent teacher credentials, learner cases, medical/business results, platform data, or guaranteed outcomes.
 9. For training-camp delivery lessons, keep the user's priority order explicit. When the user gives no order, treat delivery effect as primary; attendance, homework, assistant follow-up, rewards, and next-lesson previews support the learning loop instead of becoming separate modules.
 10. For teacher-facing feedback, preserve usable teaching assets before recommending cuts. Express critique as learner impact and concrete rewrite action, not as personal judgment of the teacher.
+11. If the material contains a sales conversion section, keep the teaching chain and sales chain separate. Do not treat sales conversion as an eighth course segment; use or recommend `$sales-conversion-eight-segment` for the conversion section.
 
 ## Workflow
 
