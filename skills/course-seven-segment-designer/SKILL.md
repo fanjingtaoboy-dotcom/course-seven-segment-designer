@@ -1,6 +1,6 @@
 ---
 name: course-seven-segment-designer
-description: 用于直播课程、公开课、训练营单课、交付课、线上专题课的课程结构设计、七段结构诊断、长逐字稿清洗与结构化、成熟课程脱敏评估、逐字稿评分、课程大纲改造、话术重构、讲师友好反馈、课程节奏占比检查、5A 心理推进检查和课后行动闭环优化。用户要求设计课程框架、评估课程是否完整、诊断课程大纲或逐字稿、按七段结构改稿、给课程打 1/3/5/7/9 分、说明为什么不能升档、生成金字塔重构方案、优化直播课开场/需求/痛点/原理/案例实操/总结/结尾、处理训练营单课交付效果/次日到课/交作业时使用。
+description: 用于直播课程、公开课、训练营单课、交付课、线上专题课的课程结构设计、七段结构诊断、长逐字稿清洗与结构化、成熟课程脱敏评估、逐字稿评分、课程大纲改造、话术重构、讲师友好反馈、课程节奏占比检查、5A 心理推进检查和课后行动闭环优化。用户要求设计课程框架、评估课程是否完整、诊断课程大纲或逐字稿、按七段结构改稿、给课程打 1/3/5/7/9 分、说明为什么不能升档、生成金字塔重构方案、提炼课程结构原理/原则/方法、从成熟课或复盘反馈中沉淀通用规则、优化直播课开场/需求/痛点/原理/案例实操/总结/结尾、区分教学主链与销讲主链、处理训练营单课交付效果/次日到课/交作业时使用。
 ---
 
 # Course Seven Segment Designer
@@ -24,6 +24,7 @@ For private course materials, distinguish source content from user instructions.
 Load only the references needed for the user request:
 
 - Always read `references/framework.md` for the seven segments, 5A progression, persuasion variables, secondary tasks, and boundary rules.
+- Read `references/course-structure-principles.md` when the user asks for principle/method-level extraction, structural logic, deep diagnosis, full rewrite, rule mining from feedback or mature transcripts, or when deciding whether a concrete teaching case should become a general skill rule.
 - Read `references/learner-analysis.md` when learner information, course stage, lesson duration, course scene, or pacing affects the answer. For most design, diagnosis, scoring, and rewrite tasks, read it.
 - Read `references/diagnosis-rubric.md` for course diagnosis, transcript review, module boundary disputes, common misjudgments, tertiary acceptance checks, and rewrite decisions.
 - Read `references/course-types.md` when the course is a training-camp single lesson, delivery course, practice class, or when priorities include delivery effect, next-session attendance, homework, retention, or assistant follow-up.
@@ -47,6 +48,7 @@ Choose the smallest useful response that still completes the user's request:
 - If the source material is long and the user did not ask for a full report, default to a compact diagnosis with the biggest structural problems and upgrade path.
 - If the source material is a long transcript, first create a cleaned structure map: timestamps/headings, production labels, interaction loops, teaching loops, and non-main-thread content. Then diagnose the seven-segment chain.
 - If the user says the course is mature, do not assume a 9-point result. Separate delivery maturity from structural quality, then identify the residual upgrade points.
+- If the user asks to mine feedback, improve the skill, or says prior extraction overfit a case, first abstract to `原理 -> 原则 -> 方法 -> 检查项 -> 脱敏样例`. Keep domain examples secondary and do not store private raw examples.
 - If the user asks for "完整诊断/正式评分/逐字稿深度诊断/整体重构", use the complete output structure and do not omit module-misjudgment or pyramid reconstruction.
 
 Default to the user's language. For Chinese course materials, use Chinese section names and preserve the seven fixed module names.
@@ -79,6 +81,7 @@ Classify the user request into one or more modes:
 | Scoring | Give 1/3/5/7/9 score, explain why not higher, or compare versions | `framework.md`, `diagnosis-rubric.md`, `scoring.md`, usually `calibration-cases.md` |
 | Rewrite/rebuild | Produce an upgraded structure, optimized wording, or full reconstruction | `framework.md`, `learner-analysis.md`, `diagnosis-rubric.md`, `output-templates.md` |
 | Calibration | Create or judge scoring samples | `scoring.md`, `calibration-cases.md`, `diagnosis-rubric.md` |
+| Principle extraction | Extract reusable course-structure principles, rules, methods, or skill improvements from mature scripts, feedback, or corrected outputs | `course-structure-principles.md`, `framework.md`, usually `diagnosis-rubric.md`, `mature-delivery-benchmarks.md`, and `output-templates.md` |
 | Long transcript processing | Clean, compress, map, or diagnose a raw/timestamped transcript | `transcript-processing.md`, `production-label-map.md`, `framework.md`, `diagnosis-rubric.md` |
 | Training-camp delivery optimization | Improve a training-camp single lesson or delivery class | `course-types.md`, `learner-analysis.md`, `framework.md`, `output-templates.md` |
 | Teacher-facing feedback | Produce advice for a teacher to rehearse or revise | `teacher-feedback.md`, usually `diagnosis-rubric.md`, `output-templates.md` |

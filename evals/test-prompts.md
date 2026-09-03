@@ -117,3 +117,19 @@ Expected behavior: read course-types and teacher-feedback; treat attendance/home
 ```
 
 Expected behavior: reject eighth module, map labels by function, and flag interference when they crowd the main line.
+
+## Principle Extraction
+
+```text
+请使用 $course-seven-segment-designer 阅读这份课程复盘反馈，帮我提炼能沉淀进 skill 的课程结构原理、判断原则和改稿方法。请不要重点复述具体案例，而是说明这些反馈能升级哪一段、哪条原则、哪些检查项。
+```
+
+Expected behavior: read course-structure-principles; output 原理 -> 原则 -> 方法 -> 检查项 -> 脱敏样例; avoid storing raw private material.
+
+## Teaching And Sales Boundary
+
+```text
+这是一整节课的逐字稿，前面有教学，后面有价格、优惠、名额和报名案例。请先识别教学主链和销讲主链，只给课程七段打分，并说明销讲部分是否需要单独诊断。
+```
+
+Expected behavior: read sales-conversion-bridge; separate teaching and sales; score only the teaching chain; recommend `$sales-conversion-eight-segment` for the sales section.
